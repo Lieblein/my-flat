@@ -7,10 +7,83 @@
   </head>
   <body>
     <a-scene>
-      <a-plane id="floor" position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="red"></a-plane>
-      <a-entity id="cameraList" position="0 157 0">
-        <a-camera></a-camera>
-      </a-entity>
+        <a-assets>
+            <img id="floor" src="./static/floor.jpg" />
+            <img id="electricity1" src="./static/electricity1.png" />
+            <img id="fotooboi" src="./static/fotooboi.png" />
+            <img id="radiator" src="./static/radiator.jpg" />
+            <img id="window" src="./static/window.jpg" />
+        </a-assets>
+        
+        <a-light type="ambient" position="-700 2000 -700" intensity="0.1"></a-light>
+        <a-entity id="cameraList" position="0 157 0">
+            <a-camera id="bedroomTop" position="770 500 0" rotation="-60 0 0"></a-camera>
+            <a-camera id="bedroomMiddle" position="880 0 -207"></a-camera>
+        </a-entity>
+
+        <a-plane id="floor" rotation="-90 0 0" width="10000" height="10000" material="src: #floor; repeat: 100 100"></a-plane>
+        <!--<a-plane id="ceiling" rotation="-90 0 0" position="0 270 0" width="10000" height="10000" material="color: white"></a-plane>-->
+        <a-entity id="rooms" position="0 135 0">
+            <a-entity id="kitchen" position="0 0 0">
+                <a-wall width="440" position="0 0 -220"></a-wall>
+                <a-wall width="570" front="true" position="285 0 -440"></a-wall>
+                <a-wall width="404" position="570 0 -216.5"></a-wall>
+                <a-entity geometry="primitive: box; width: 44; depth: 60; height: 270" position="22 0 -30" material="color: white"></a-entity>
+                <a-entity geometry="primitive: box; width: 100; depth: 23; height: 270" position="520 0 -428.5" material="color: white"></a-entity>
+                <a-entity geometry="primitive: box; width: 112.5; depth: 12.5; height: 270" position="514 0 -6.25" material="color: white"></a-entity>
+                <a-entity position="44 0 0">
+                    <a-wall width="48.5" front="true" position="24.25 0 0"></a-wall>
+                    <a-entity geometry="primitive: box; width: 131; depth: 1; height: 62" position="114 104 0" material="color: white"></a-entity>
+                    <a-wall width="234" front="true" position="296.5 0 0"></a-wall>
+                </a-entity>
+            </a-entity>
+
+            <a-entity id="bedroom" position="580 0 0">
+                <a-wall width="417.5" position="0 0 -208.75" material="src: #fotooboi"></a-wall>
+                <a-wall width="426" front="true" position="213 0 -426" color="#cad2d4"></a-wall>
+                <a-image src="#window" width="130" height="150" position="159.5 20 -425"></a-image>
+                <a-image src="#radiator" width="65" height="65" position="159.5 -95 -425"></a-image>
+                <a-entity geometry="primitive: box; width: 7.5; depth: 23; height: 270" position="3.25 0 -414" material="color: #cad2d4"></a-entity>
+                <a-entity geometry="primitive: box; width: 160; depth: 23; height: 270" position="346 0 -414" material="color: #cad2d4"></a-entity>
+                <a-entity geometry="primitive: box; width: 21; depth: 13; height: 270" position="414.5 0 -6.5" material="color: #cad2d4"></a-entity>
+                <a-entity>
+                    <a-wall width="17" front="true" position="8.5 0 0" color="#cad2d4"></a-wall>
+                    <a-entity geometry="primitive: box; width: 92; depth: 1; height: 62" position="63 104 0" material="color: #cad2d4"></a-entity>
+                    <a-wall width="298" front="true" position="258 0 0" color="#cad2d4"></a-wall>
+                </a-entity>
+                <a-entity position="425 0 -402" rotation="0 -90 0">
+                    <a-wall width="244" front="true" position="122 0 0" color="#cad2d4"></a-wall>
+                    <a-entity geometry="primitive: box; width: 78; depth: 1; height: 62" position="283 104 0" material="color: #cad2d4"></a-entity>
+                    <a-wall width="80" front="true" position="362 0 0" color="#cad2d4"></a-wall>
+                </a-entity>
+                <a-image src="#window" width="100" height="120" position="424 12 -209" rotation="0 -90 0"></a-image>
+                <a-image src="#radiator" width="65" height="65" position="424 -95 -209" rotation="0 -90 0"></a-image>
+                <a-image src="#electricity2" width="12" height="8" position="424 -114 -392" rotation="0 -90 90"></a-image>
+
+                <a-entity position="0 0 -85">
+                    <a-entity class="nightstand" geometry="primitive: box; width: 35; depth: 41; height: 61.5" position="18.5 -103 -20.5" material="color: #341c0f"></a-entity>
+                    <a-image src="#electricity1" width="8" height="8" position="1.5 -61 -20" rotation="0 -90 0"></a-image>
+                    <a-entity id="bed" geometry="primitive: box; width: 210; depth: 205; height: 45" position="105 -114 -143.5" material="color: white"></a-entity>
+                    <a-entity id="headboard" geometry="primitive: box; width: 5; depth: 205; height: 50" position="2.5 -66 -143.5" material="color: white"></a-entity>
+                    <a-entity class="nightstand" geometry="primitive: box; width: 35; depth: 41; height: 61.5" position="18.5 -103 -266.5" material="color: #341c0f"></a-entity>
+                    <a-image src="#electricity1" width="8" height="8" position="1.5 -61 -266" rotation="0 -90 0"></a-image>
+                </a-entity>
+
+                <a-entity position="363 0 -333">
+                    <a-entity id="myTable" geometry="primitive: box; width: 60; depth: 100; height: 74" position="30 -100 0" material="color: #341c0f"></a-entity>
+                    <a-entity id="myPK" geometry="primitive: box; width: 41; depth: 18; height: 40" position="26 -115 -60" material="color: black"></a-entity>
+                </a-entity>
+
+                <a-entity id="cupboard" geometry="primitive: box; width: 171; depth: 56; height: 220" position="318 -25 -28" material="color: white"></a-entity>
+
+                <a-entity position="105 64 -250">
+                    <a-light type="point" position="0 0 1" intensity="0.225"></a-light>
+                    <a-light type="point" position="1 0 0" intensity="0.225"></a-light>
+                    <a-light type="point" position="0 0 -1" intensity="0.225"></a-light>
+                    <a-light type="point" position="-1 0 0" intensity="0.225"></a-light>
+                </a-entity>
+            </a-entity>
+        </a-entity>
     </a-scene>
   </body>
 </html>
