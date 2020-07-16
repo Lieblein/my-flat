@@ -23,7 +23,15 @@ AFRAME.registerComponent('wall', {
     },
 
     init() {
-        const { el, data: { width, front, color, material } } = this;
+        const {
+            el,
+            data: {
+                width,
+                front,
+                color,
+                material,
+            },
+        } = this;
 
         el.setAttribute('geometry', `primitive: box; width: ${width}; depth: 1; height: 270`);
         el.setAttribute('material', material === '' ? `color: ${color}` : material);

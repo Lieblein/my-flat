@@ -6,9 +6,17 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <link href="./assets/css/app.css" rel="stylesheet"></head>
   <body>
+    <menu class="menu">
+        <button type="button" class="menu__button" id="toHall">Коридор</button>
+        <button type="button" class="menu__button" id="toKitchen">Кухня</button>
+        <button type="button" class="menu__button" id="toBedroom">Спальня</button>
+        <button type="button" class="menu__button" id="toChildroom">Детская</button>
+        <button type="button" class="menu__button" id="toBathroom">Ванна</button>
+        <button type="button" class="menu__button" id="toWC">Туалет</button>
+    </menu>  
     <a-scene>
         <a-assets>
-            <img id="floor" src="./static/floor.jpg" />
+            <img id="floorImg" src="./static/floor.jpg" />
             <img id="electricity1" src="./static/electricity1.png" />
             <img id="fotooboi" src="./static/fotooboi.png" />
             <img id="radiator" src="./static/radiator.jpg" />
@@ -21,15 +29,10 @@
         
         <a-light type="ambient" position="-700 2000 -700" intensity="0.1"></a-light>
         <a-entity id="cameraList" position="0 157 0">
-            <!--<a-camera id="hallByOutsideDoor" position="160 0 -30"></a-camera>
-            <a-camera id="bedroomTop" position="770 500 -210" rotation="-60 0 0"></a-camera>
-            <a-camera id="bedroomMiddle" position="880 0 -417"></a-camera>
-            <a-camera id="childroomMiddle" position="910 0 -60"></a-camera>
-            <a-camera id="bathroomMiddle" position="570 0 -17"></a-camera>-->
-            <a-camera id="wcMiddle" position="350 0 40"></a-camera>
+            <a-camera id="camera" position="0 0 0"></a-camera>
         </a-entity>
 
-        <a-plane id="floor" rotation="-90 0 0" position="535 0 -325" width="1500" height="1500" material="src: #floor; repeat: 100 100" visible="false"></a-plane>
+        <a-plane id="floor" rotation="-90 0 0" position="535 0 -325" width="1500" height="1500" material="src: #floorImg; repeat: 100 100"></a-plane>
         <!--<a-plane id="ceiling" rotation="-90 0 0" position="0 270 0" width="10000" height="10000" material="color: white"></a-plane>-->
         <a-entity id="rooms" position="0 135 0">
             <a-entity id="hall" position="0 0 0">
@@ -45,15 +48,15 @@
                 <a-entity id="electricityRegister" geometry="primitive: box; width: 25.5; depth: 15; height: 20" position="72.25 20.5 -24.5" material="color: white"></a-entity>
 
                 <a-entity position="158 70 -107">
-                    <a-light type="point" position="0 0 -1" intensity="0.1" visible="false"></a-light>
-                    <a-light type="point" position="-1 0 1" intensity="0.1" visible="false"></a-light>
-                    <a-light type="point" position="1 0 1" intensity="0.1" visible="false"></a-light>
+                    <a-light type="point" position="0 0 -1" intensity="0.1"></a-light>
+                    <a-light type="point" position="-1 0 1" intensity="0.1"></a-light>
+                    <a-light type="point" position="1 0 1" intensity="0.1"></a-light>
                 </a-entity>
-                <a-light type="point" position="241.5 130 -156" intensity="0.1" visible="false"></a-light>
-                <a-light type="point" position="341.5 130 -156" intensity="0.1" visible="false"></a-light>
-                <a-light type="point" position="441.5 130 -156" intensity="0.1" visible="false"></a-light>
-                <a-light type="point" position="541.5 130 -156" intensity="0.1" visible="false"></a-light>
-                <a-light type="point" position="641.5 130 -156" intensity="0.1" visible="false"></a-light>
+                <a-light type="point" position="241.5 130 -156" intensity="0.1"></a-light>
+                <a-light type="point" position="341.5 130 -156" intensity="0.1"></a-light>
+                <a-light type="point" position="441.5 130 -156" intensity="0.1"></a-light>
+                <a-light type="point" position="541.5 130 -156" intensity="0.1"></a-light>
+                <a-light type="point" position="641.5 130 -156" intensity="0.1"></a-light>
             </a-entity>
 
             <a-entity id="kitchen" position="0 0 -210">
@@ -67,6 +70,14 @@
                     <a-wall width="48.5" front="true" position="24.25 0 0"></a-wall>
                     <a-entity geometry="primitive: box; width: 131; depth: 1; height: 62" position="114 104 0" material="color: white"></a-entity>
                     <a-wall width="234" front="true" position="296.5 0 0"></a-wall>
+                </a-entity>
+
+                <!--заменить располодение света-->
+                <a-entity position="105 64 -250">
+                    <a-light type="point" position="0 0 10" intensity="0.225"></a-light>
+                    <a-light type="point" position="10 0 0" intensity="0.225"></a-light>
+                    <a-light type="point" position="0 0 -10" intensity="0.225"></a-light>
+                    <a-light type="point" position="-10 0 0" intensity="0.225"></a-light>
                 </a-entity>
             </a-entity>
 
@@ -109,10 +120,10 @@
                 <a-entity id="cupboard" geometry="primitive: box; width: 171; depth: 56; height: 220" position="318 -25 -28" material="color: white"></a-entity>
 
                 <a-entity position="105 64 -250">
-                    <a-light type="point" position="0 0 1" intensity="0.225" visible="false"></a-light>
-                    <a-light type="point" position="1 0 0" intensity="0.225" visible="false"></a-light>
-                    <a-light type="point" position="0 0 -1" intensity="0.225" visible="false"></a-light>
-                    <a-light type="point" position="-1 0 0" intensity="0.225" visible="false"></a-light>
+                    <a-light type="point" position="0 0 10" intensity="0.225"></a-light>
+                    <a-light type="point" position="10 0 0" intensity="0.225"></a-light>
+                    <a-light type="point" position="0 0 -10" intensity="0.225"></a-light>
+                    <a-light type="point" position="-10 0 0" intensity="0.225"></a-light>
                 </a-entity>
             </a-entity>
 
@@ -124,6 +135,15 @@
 
                 <a-image src="#window" width="174.5" height="150" position="427 20 -191.25" rotation="0 -90 0"></a-image>
                 <a-image src="#radiator" width="65" height="65" position="427 -95 -191.25" rotation="0 -90 0"></a-image>
+
+                <a-image src="#door" width="82.5" height="208" position="1 -30 -258.75" rotation="0 90 0"></a-image>
+
+                <a-entity position="213.75 70 -152.5">
+                    <a-light type="point" position="0 0 -10" intensity="0.2"></a-light>
+                    <a-light type="point" position="0 0 10" intensity="0.2"></a-light>
+                    <a-light type="point" position="10 0 0" intensity="0.2"></a-light>
+                    <a-light type="point" position="-10 0 0" intensity="0.2"></a-light>
+                </a-entity>
             </a-entity>
 
             <a-entity id="bathroom" position="489 0 104.5">
@@ -143,17 +163,18 @@
 
                 <a-entity geometry="primitive: box; width: 90; depth: 52; height: 54" position="77 -91 -26" material="color: #bdbac1">
                     <a-entity geometry="primitive: box; width: 50; depth: 39; height: 13.5" position="0 33.75 0" material="color: white"></a-entity>
+                    <a-circle radius="35" rotation="0 180 0" position="0 95 20" material="color: white"></a-circle>
                 </a-entity>
 
-                <a-image src="#door" width="82.5" height="208" position="59.25 -30 -205.5"></a-image>
+                <a-image src="#door" width="82.5" height="208" position="59.25 -30 -205"></a-image>
 
                 <a-entity position="70 70 -106">
-                    <a-light type="point" position="0 0 -50" intensity="0.5" visible="false"></a-light>
-                    <a-light type="point" position="0 0 50" intensity="0.5" visible="false"></a-light>
+                    <a-light type="point" position="0 0 -50" intensity="0.5"></a-light>
+                    <a-light type="point" position="0 0 50" intensity="0.5"></a-light>
                 </a-entity>
             </a-entity>
 
-            <a-entity id="wc" position="250 0 103">
+            <a-entity id="wc" position="273 0 25">
                 <a-plane rotation="-90 0 0" position="94 -135 -60" width="188" height="120" material="src: #taurano; repeat: 3.133333 2"></a-plane>
 
                 <a-wall width="120" position="0 0 -60" material="src: #kolliano; repeat: 4 9"></a-wall>
@@ -163,10 +184,10 @@
                 <a-entity geometry="primitive: box; width: 29; depth: 22.5; height: 270" position="14.5 0 -11.25" material="src: #kolliano; repeat: 1 9"></a-entity>
                 <a-entity geometry="primitive: box; width: 24; depth: 25.5; height: 270" position="12 0 -107.25" material="src: #kolliano; repeat: 1 9"></a-entity>
 
-                <a-image src="#door" width="82.5" height="208" position="98.25 -30 -119.5"></a-image>
-
                 <a-entity geometry="primitive: box; width: 60; depth: 40; height: 85" position="153 -93 -25" material="color: white"></a-entity>
                 <a-entity geometry="primitive: box; width: 63.5; depth: 36.5; height: 78.5" position="31.75 -86.5 -58.5" material="color: white"></a-entity>
+
+                <a-image src="#door" width="82.5" height="208" position="98.25 -30 -119"></a-image>
 
                 <a-entity position="94 70 -60">
                     <a-light type="point" position="-50 0 0" intensity="0.5"></a-light>
