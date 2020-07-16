@@ -13,16 +13,22 @@
             <img id="fotooboi" src="./static/fotooboi.png" />
             <img id="radiator" src="./static/radiator.jpg" />
             <img id="window" src="./static/window.jpg" />
+            <img id="door" src="./static/door.jpg" />
+            <img id="bath" src="./static/bath.jpg" />
+            <img id="kolliano" src="./static/kolliano.jpg" />
+            <img id="taurano" src="./static/taurano.jpg" />
         </a-assets>
         
         <a-light type="ambient" position="-700 2000 -700" intensity="0.1"></a-light>
         <a-entity id="cameraList" position="0 157 0">
-            <a-camera id="hall" position="160 0 -30"></a-camera>
-            <!--<a-camera id="bedroomTop" position="770 500 -210" rotation="-60 0 0"></a-camera>
-            <a-camera id="bedroomMiddle" position="880 0 -417"></a-camera>-->
+            <!--<a-camera id="hallByOutsideDoor" position="160 0 -30"></a-camera>
+            <a-camera id="bedroomTop" position="770 500 -210" rotation="-60 0 0"></a-camera>
+            <a-camera id="bedroomMiddle" position="880 0 -417"></a-camera>
+            <a-camera id="childroomMiddle" position="910 0 -60"></a-camera>-->
+            <a-camera id="bathroomMiddle" position="570 0 -17"></a-camera>
         </a-entity>
 
-        <a-plane id="floor" rotation="-90 0 0" width="10000" height="10000" material="src: #floor; repeat: 100 100"></a-plane>
+        <a-plane id="floor" rotation="-90 0 0" position="535 0 -325" width="1500" height="1500" material="src: #floor; repeat: 100 100" visible="false"></a-plane>
         <!--<a-plane id="ceiling" rotation="-90 0 0" position="0 270 0" width="10000" height="10000" material="color: white"></a-plane>-->
         <a-entity id="rooms" position="0 135 0">
             <a-entity id="hall" position="0 0 0">
@@ -38,15 +44,15 @@
                 <a-entity id="electricityRegister" geometry="primitive: box; width: 25.5; depth: 15; height: 20" position="72.25 20.5 -24.5" material="color: white"></a-entity>
 
                 <a-entity position="158 70 -107">
-                    <a-light type="point" position="0 0 -1" intensity="0.1"></a-light>
-                    <a-light type="point" position="-1 0 1" intensity="0.1"></a-light>
-                    <a-light type="point" position="1 0 1" intensity="0.1"></a-light>
+                    <a-light type="point" position="0 0 -1" intensity="0.1" visible="false"></a-light>
+                    <a-light type="point" position="-1 0 1" intensity="0.1" visible="false"></a-light>
+                    <a-light type="point" position="1 0 1" intensity="0.1" visible="false"></a-light>
                 </a-entity>
-                <a-light type="point" position="241.5 130 -156" intensity="0.1"></a-light>
-                <a-light type="point" position="341.5 130 -156" intensity="0.1"></a-light>
-                <a-light type="point" position="441.5 130 -156" intensity="0.1"></a-light>
-                <a-light type="point" position="541.5 130 -156" intensity="0.1"></a-light>
-                <a-light type="point" position="641.5 130 -156" intensity="0.1"></a-light>
+                <a-light type="point" position="241.5 130 -156" intensity="0.1" visible="false"></a-light>
+                <a-light type="point" position="341.5 130 -156" intensity="0.1" visible="false"></a-light>
+                <a-light type="point" position="441.5 130 -156" intensity="0.1" visible="false"></a-light>
+                <a-light type="point" position="541.5 130 -156" intensity="0.1" visible="false"></a-light>
+                <a-light type="point" position="641.5 130 -156" intensity="0.1" visible="false"></a-light>
             </a-entity>
 
             <a-entity id="kitchen" position="0 0 -210">
@@ -102,11 +108,52 @@
                 <a-entity id="cupboard" geometry="primitive: box; width: 171; depth: 56; height: 220" position="318 -25 -28" material="color: white"></a-entity>
 
                 <a-entity position="105 64 -250">
-                    <a-light type="point" position="0 0 1" intensity="0.225"></a-light>
-                    <a-light type="point" position="1 0 0" intensity="0.225"></a-light>
-                    <a-light type="point" position="0 0 -1" intensity="0.225"></a-light>
-                    <a-light type="point" position="-1 0 0" intensity="0.225"></a-light>
+                    <a-light type="point" position="0 0 1" intensity="0.225" visible="false"></a-light>
+                    <a-light type="point" position="1 0 0" intensity="0.225" visible="false"></a-light>
+                    <a-light type="point" position="0 0 -1" intensity="0.225" visible="false"></a-light>
+                    <a-light type="point" position="-1 0 0" intensity="0.225" visible="false"></a-light>
                 </a-entity>
+            </a-entity>
+
+            <a-entity id="childroom" position="700 0 103">
+                <a-wall width="305" position="0 0 -152.5"></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 -305"></a-wall>
+                <a-wall width="305" position="427.5 0 -152.5"></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 0"></a-wall>
+
+                <a-image src="#window" width="174.5" height="150" position="427 20 -191.25" rotation="0 -90 0"></a-image>
+                <a-image src="#radiator" width="65" height="65" position="427 -95 -191.25" rotation="0 -90 0"></a-image>
+            </a-entity>
+
+            <a-entity id="bathroom" position="489 0 104.5">
+                <a-plane rotation="-90 -180 0" position="61 -135 -103" width="122" height="206" material="src: #taurano; repeat: 2.033333 3.433333"></a-plane>
+
+                <a-wall width="206" position="0 0 -103" material="src: #kolliano; repeat: 6.377777 9"></a-wall>
+                <a-wall width="202" front="true" position="101 0 -206" material="src: #kolliano; repeat: 6.377777 9"></a-wall>
+                <a-wall width="206" position="202 0 -103" material="src: #kolliano; repeat: 6.866666 9"></a-wall>
+                <a-wall width="202" front="true" position="101 0 0" material="src: #kolliano; repeat: 6.377777 9"></a-wall>
+                <a-entity geometry="primitive: box; width: 18; depth: 122.5; height: 270" position="9 0 -143.75" material="src: #kolliano; repeat: 4.083333 9"></a-entity>
+
+                <a-entity position="162 -101.5 -90">
+                    <a-plane rotation="-90 0 0" position="0 34 0" width="80" height="180" material="src: #bath"></a-plane>
+                    <a-plane rotation="0 -90 -180" position="-40 0 -13.5" width="206" height="67" material="src: #kolliano; repeat: 6.86666 2.23333"></a-plane>
+                    <a-plane rotation="-88 0 0" position="0 34 -103" width="80" height="26" material="src: #kolliano; repeat: 2.66666 0.86666"></a-plane>
+                </a-entity>
+
+                <a-entity geometry="primitive: box; width: 90; depth: 52; height: 54" position="77 -91 -26" material="color: #bdbac1">
+                    <a-entity geometry="primitive: box; width: 50; depth: 39; height: 13.5" position="0 33.75 0" material="color: white"></a-entity>
+                </a-entity>
+
+                <a-image src="#door" width="82.5" height="208" position="59.25 -30 -205.5" rotation="0 0 0"></a-image>
+
+                <a-entity position="70 70 -106">
+                    <a-light type="point" position="0 0 -50" intensity="0.4"></a-light>
+                    <a-light type="point" position="0 0 50" intensity="0.4"></a-light>
+                </a-entity>
+            </a-entity>
+
+            <a-entity id="wc" position="250 0 103">
+
             </a-entity>
         </a-entity>
     </a-scene>
