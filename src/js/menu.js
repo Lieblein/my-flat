@@ -44,6 +44,6 @@ function chooseMenuItem() {
 }
 
 Array.prototype.forEach.call(menuButtons, button => button.addEventListener('click', chooseMenuItem));
-chooseMenuItem.call({ id: 'toHall' });
+chooseMenuItem.call({ id: 'toKitchen' });
 
 // TODO hide/open menu
