@@ -38,7 +38,7 @@
             <a-camera id="camera" position="0 0 0"></a-camera>
         </a-entity>
 
-        <a-plane id="floor" rotation="-90 0 0" position="535 0 -325" width="1500" height="1500" material="src: #floorImg; repeat: 100 100"></a-plane>
+        <a-plane id="floor" rotation="-90 0 0" position="535 0 -325" width="1500" height="1500" material="src: #floorImg; repeat: 50 50"></a-plane>
         <!--<a-plane id="ceiling" rotation="-90 0 0" position="0 270 0" width="10000" height="10000" material="color: white"></a-plane>-->
         <a-entity id="rooms" position="0 135 0">
             <a-entity id="hall" position="0 0 0">
@@ -89,27 +89,48 @@
                     <a-image src="#radiator" width="65" height="65" position="0 -95 0"></a-image>
                 </a-entity>
 
-                <a-entity position="0 0 -60">
-                    <!--зазор между стенкой холодильника и стеной сейчас 15см-->
+                <!--Холодильник справа-->
+                <!--столешница 245 см, рабочая зона 105 см (245-60-60-20)-->
+                <!--<a-entity position="0 0 -60">
                     <a-entity geometry="primitive: box; width: 60; depth: 60; height: 180" position="30 -45 -335" material="src: #refrigerator"></a-entity>
-                    <!--дверца холодильника-->
-                    <!--<a-entity geometry="primitive: box; width: 60; depth: 2; height: 180" position="90 -45 -364" material="color: white"></a-entity>-->
                     <a-entity geometry="primitive: box; width: 2; depth: 14.5; height: 180" position="59 -45 -372.75" material="color: white"></a-entity>
                     <a-entity geometry="primitive: box; width: 2; depth: 75; height: 40" position="59 65 -342.5" material="color: white"></a-entity>
                     <a-entity geometry="primitive: box; width: 60; depth: 380; height: 50" position="30 110 -190" material="color: white"></a-entity>
-                    <a-entity geometry="primitive: box; width: 60; depth: 70; height: 220" position="30 -25 -35" material="color: white">
-                        <a-image src="#microwave" width="70" height="40" position="30.5 18 0" rotation="0 90 0"></a-image>
-                        <a-image src="#oven" width="70" height="60" position="30.5 -32 0" rotation="0 90 0"></a-image>
+                    <a-entity geometry="primitive: box; width: 60; depth: 60; height: 220" position="30 -25 -30" material="color: white">
+                        <a-image src="#microwave" width="60" height="40" position="30.5 -10 0" rotation="0 90 0"></a-image>
+                        <a-image src="#oven" width="60" height="60" position="30.5 40 0" rotation="0 90 0"></a-image>
                     </a-entity>
                     <a-entity geometry="primitive: box; width: 16; depth: 60; height: 270" position="52 0 30" material="color: white"></a-entity>
-                    <a-entity geometry="primitive: box; width: 60; depth: 235; height: 80" position="30 -95 -187.75" material="color: white"></a-entity>
-                    <a-entity geometry="primitive: box; width: 63; depth: 235; height: 3" position="30 -54 -187.75" material="color: #cf9a63"></a-entity>
-                    <a-entity geometry="primitive: box; width: 35; depth: 235; height: 75" position="17.5 47 -187.75" material="color: #cf9a63"></a-entity>
-                    <a-entity geometry="primitive: box; width: 60; depth: 235; height: 1" position="30 85 -187.75" material="color: #cf9a63"></a-entity>
-                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 140" position="30 15 -70" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 245; height: 80" position="30 -95 -182.75" material="color: white"></a-entity>
+                    <a-entity geometry="primitive: box; width: 63; depth: 245; height: 3" position="30 -54 -182.75" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 35; depth: 245; height: 75" position="17.5 47 -182.75" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 245; height: 1" position="30 85 -182.75" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 140" position="30 15 -60" material="color: #cf9a63"></a-entity>
                     <a-entity geometry="primitive: box; width: 60; depth: 1; height: 140" position="30 15 -305" material="color: #cf9a63"></a-entity>
-                    <a-image src="#hob" width="60" height="60" position="30 -52 -120" rotation="-90 0 0"></a-image>
-                    <a-image src="#sink" width="45" height="60" position="35 -52 -270" rotation="-90 0 0"></a-image>
+                    <a-image src="#hob" width="60" height="60" position="30 -52 -110" rotation="-90 0 0"></a-image>
+                    <a-image src="#sink" width="45" height="60" position="35 -52 -272.5" rotation="-90 -180 0"></a-image>
+                </a-entity>-->
+
+                <!--Холодильник слева-->
+                <!--столешница 255 см, рабочая зона 115 см (255-60-60-20)-->
+                <a-entity position="0 0 0">
+                    <a-entity geometry="primitive: box; width: 16; depth: 60; height: 270" position="52 0 -30" material="color: white"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 60; height: 180" position="30 -45 -90" material="src: #refrigerator"></a-entity>
+                    <a-entity geometry="primitive: box; width: 2; depth: 60; height: 40" position="59 65 -90" material="color: white"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 380; height: 50" position="30 110 -250" material="color: white"></a-entity>
+                    <a-entity geometry="primitive: box; width: 35; depth: 255; height: 75" position="17.5 47 -247.5" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 63; depth: 255; height: 3" position="30 -54 -247.5" material="color: #cf9a63">
+                        <a-image src="#sink" width="45" height="60" position="5 2 95" rotation="-90 0 0"></a-image>
+                        <a-image src="#hob" width="60" height="60" position="0 2 -77.5" rotation="-90 0 0"></a-image>
+                    </a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 255; height: 80" position="30 -95 -247.5" material="color: white"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 65; height: 220" position="30 -25 -407.5" material="color: white">
+                        <a-image src="#microwave" width="60" height="40" position="30.5 -10 2.5" rotation="0 90 0"></a-image>
+                        <a-image src="#oven" width="60" height="60" position="30.5 40 2.5" rotation="0 90 0"></a-image>
+                    </a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 255; height: 1" position="30 85 -247.5" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 140" position="30 15 -120" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 140" position="30 15 -375" material="color: #cf9a63"></a-entity>
                 </a-entity>
 
                 <a-entity position="125 55 -244">

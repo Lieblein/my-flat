@@ -1,6 +1,6 @@
 const buttonMap = new Map([
     ['toHall', { camera: { position: '160 0 -30', rotation: '0 350 0' }, roomId: 'hall' }],
-    ['toKitchen', { camera: { position: '195 0 -438', rotation: '-5 -266 0' }, roomId: 'kitchen' }],
+    ['toKitchen', { camera: { position: '230 0 -438', rotation: '-5 -266 0' }, roomId: 'kitchen' }],
     ['toBedroom', { camera: { position: '880 0 -417', rotation: '-16 450 0' }, roomId: 'bedroom' }],
     ['toChildroom', { camera: { position: '910 0 -60', rotation: '-10 270 0' }, roomId: 'childroom' }],
     ['toBathroom', { camera: { position: '570 0 -17', rotation: '-27 553 0' }, roomId: 'bathroom', hideFloor: true }],
