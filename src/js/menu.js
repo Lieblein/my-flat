@@ -1,6 +1,8 @@
 const buttonMap = new Map([
-    ['toHall', { camera: { position: '160 0 -30', rotation: '0 350 0' }, roomId: 'hall' }],
+    ['toLobby', { camera: { position: '160 0 -30', rotation: '0 350 -60' }, roomId: 'hall' }],
+    ['toHall', { camera: { position: '550 0 -145', rotation: '0 350 -60' }, roomId: 'hall' }],
     ['toKitchen', { camera: { position: '230 0 -438', rotation: '-5 -266 0' }, roomId: 'kitchen' }],
+    ['toSofa', { camera: { position: '375 -42 -515', rotation: '0 0 0' }, roomId: 'kitchen' }],
     ['toBedroom', { camera: { position: '880 0 -417', rotation: '-16 450 0' }, roomId: 'bedroom' }],
     ['toChildroom', { camera: { position: '910 0 -60', rotation: '-10 270 0' }, roomId: 'childroom' }],
     ['toBathroom', { camera: { position: '570 0 -17', rotation: '-27 553 0' }, roomId: 'bathroom', hideFloor: true }],
@@ -44,6 +46,6 @@ function chooseMenuItem() {
 }
 
 Array.prototype.forEach.call(menuButtons, button => button.addEventListener('click', chooseMenuItem));
-chooseMenuItem.call({ id: 'toKitchen' });
+chooseMenuItem.call({ id: 'toHall' });
 
 // TODO hide/open menu
