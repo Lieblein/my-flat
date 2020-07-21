@@ -1,5 +1,5 @@
 const buttonMap = new Map([
-    ['toLobby', { camera: { position: '160 0 -30', rotation: '0 350 -60' }, roomId: 'hall' }],
+    ['toLobby', { camera: { position: '190 0 -64', rotation: '0 350 -60' }, roomId: 'hall' }],
     ['toHall', { camera: { position: '550 0 -145', rotation: '0 350 -60' }, roomId: 'hall' }],
     ['toKitchen', { camera: { position: '230 0 -438', rotation: '-5 -266 0' }, roomId: 'kitchen' }],
     ['toSofa', { camera: { position: '375 -42 -515', rotation: '0 0 0' }, roomId: 'kitchen' }],
@@ -8,12 +8,9 @@ const buttonMap = new Map([
     ['toBathroom', { camera: { position: '570 0 -17', rotation: '-27 553 0' }, roomId: 'bathroom', hideFloor: true }],
     ['toWC', { camera: { position: '360 0 -48', rotation: '-39 540 0' }, roomId: 'wc', hideFloor: true }],
 ]);
-const menuButtons = document.getElementsByClassName('menu__button');
-const floor = document.getElementById('floor');
-const camera = document.getElementById('camera');
-const lights = document.getElementsByTagName('a-light');
 
 function toggleActiveMenuItem(newActiveButtonId) {
+    const menuButtons = document.getElementsByClassName('menu__button');
     const activeMenuItemClass = 'menu__button--active';
     Array.prototype.forEach.call(
         menuButtons,
@@ -23,11 +20,13 @@ function toggleActiveMenuItem(newActiveButtonId) {
 }
 
 function moveCamera({ position, rotation }) {
+    const camera = document.getElementById('camera');
     camera.setAttribute('position', position);
     camera.setAttribute('rotation', rotation);
 }
 
-function toggleLight(newRoomId) {
+function toggleLight(newRoomId) { 
+    const lights = document.getElementsByTagName('a-light');
     Array.prototype.forEach.call(lights, light => light.setAttribute('visible', false));
     const newRoomLights = document.getElementById(newRoomId).getElementsByTagName('a-light');
     Array.prototype.forEach.call(newRoomLights, light => light.setAttribute('visible', true));
@@ -37,15 +36,23 @@ function chooseMenuItem() {
     const { id } = this;
     toggleActiveMenuItem(id);
 
-    const { camera: cameraData, roomId, hideFloor } = buttonMap.get(id);
-    moveCamera(cameraData);
+    const { camera, roomId, hideFloor } = buttonMap.get(id);
+    moveCamera(camera);
     toggleLight(roomId);
+
+    const floor = document.getElementById('floor');
     floor.setAttribute('visible', !hideFloor);
 
     // TODO работа с адресной строкой
 }
 
-Array.prototype.forEach.call(menuButtons, button => button.addEventListener('click', chooseMenuItem));
-chooseMenuItem.call({ id: 'toHall' });
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButtons = document.getElementsByClassName('menu__button');
+    Array.prototype.forEach.call(menuButtons, button => button.addEventListener('click', chooseMenuItem));
+
+    document.getElementById('scene').addEventListener('loaded', () => {
+        chooseMenuItem.call({ id: 'toLobby' });
+    });
+});
 
 // TODO hide/open menu

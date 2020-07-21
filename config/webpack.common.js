@@ -85,7 +85,7 @@ const webpackConfig = function (options) {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                inject: 'body',
+                inject: 'head',
                 template: 'src/index.html',
             }),
             new CopyWebpackPlugin([
