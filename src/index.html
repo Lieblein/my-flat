@@ -22,6 +22,7 @@
             <img id="electricity1Black" src="./static/electricity1Black.png" />
             <img id="electricity2" src="./static/electricity2.png" />
             <img id="electricityKitchen" src="./static/electricityKitchen.png" />
+            <img id="electricityTV" src="./static/electricityTV.png" />
             <img id="fotooboi" src="./static/fotooboi.png" />
             <img id="radiator" src="./static/radiator.jpg" />
             <img id="window" src="./static/window.jpg" />
@@ -36,6 +37,7 @@
             <img id="sink" src="./static/sink.jpg" />
             <img id="wallpaperKitchen" src="./static/wallpaperKitchen.png" />
             <img id="wallpaperHall" src="./static/wallpaperHall.png" />
+            <img id="childWallpaper" src="./static/childWallpaper (3).png" />
         </a-assets>
         
         <a-entity id="cameraList" position="0 157 0">
@@ -95,9 +97,13 @@
                 <a-wall width="440" position="0 0 -220" color="#cf9a63"></a-wall>
                 <a-wall width="570" front="true" position="285 0 -440" material="src: #wallpaperKitchen; repeat: 5.37735 2.54716"></a-wall>
 
-                <a-wall width="212" position="570 0 -311" color="black"></a-wall>
+                <a-wall width="212" position="570 0 -311" color="black">
+                    <a-entity position="-2 -10 -3" geometry="primitive: box; width: 28; depth: 3; height: 16" material="color: #cf9a63">
+                        <a-image src="#electricityTV" width="18" height="8" position="0 0 -2"></a-image>
+                    </a-entity>
+                </a-wall>
                 <a-entity position="567 0 -311" rotation="0 90 0" rails="width: 212; itemWidth: 4"></a-entity>
-                <a-entity id="tv" geometry="primitive: box; width: 3; depth: 140; height: 90" position="562.5 -10 -311" material="color: black"></a-entity>
+                <a-entity id="tv" geometry="primitive: box; width: 3; depth: 140; height: 90" position="562.5 -10 -311" material="color: black; opacity: 0.3"></a-entity>
                 <a-entity id="sofa" position="370 -95 -311">
                     <a-entity geometry="primitive: box; width: 20; depth: 180; height: 40" position="-30 20 0" material="color: #2c2827"></a-entity>
                     <a-entity geometry="primitive: box; width: 80; depth: 180; height: 40" position="0 -20 0" material="color: #2c2827"></a-entity>
@@ -230,15 +236,50 @@
             </a-entity>
 
             <a-entity id="childroom" position="700 0 103">
-                <a-wall width="305" position="0 0 -152.5"></a-wall>
-                <a-wall width="427.5" front="true" position="213.75 0 -305"></a-wall>
-                <a-wall width="305" position="427.5 0 -152.5"></a-wall>
-                <a-wall width="427.5" front="true" position="213.75 0 0"></a-wall>
+                <!--<a-wall width="305" position="0 0 -152.5" material="src: #childWallpaper; repeat: 5.75472 5.09434"></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 -305" material="src: #childWallpaper; repeat: 8.06604 5.09434"></a-wall>
+                <a-wall width="305" position="427.5 0 -152.5" material="src: #childWallpaper; repeat: 5.75472 5.09434"></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 0" material="src: #childWallpaper; repeat: 8.06604 5.09434"></a-wall>-->
+                <a-wall width="305" position="0 0 -152.5" material="src: #childWallpaper; repeat: 2.87736 4.21875"></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 -305" material="src: #childWallpaper; repeat: 4.03302 4.21875"></a-wall>
+                <a-wall width="305" position="427.5 0 -152.5" material="src: #childWallpaper; repeat: 2.87736 4.21875"></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 0" material="src: #childWallpaper; repeat: 4.03302 4.21875"></a-wall>
 
-                <a-image src="#window" width="174.5" height="150" position="427 20 -191.25" rotation="0 -90 0"></a-image>
-                <a-image src="#radiator" width="65" height="65" position="427 -95 -191.25" rotation="0 -90 0"></a-image>
+                <a-image src="#window" width="174.5" height="150" position="426 20 -191.25" rotation="0 -90 0"></a-image>
+                <a-image src="#radiator" width="65" height="65" position="426 -95 -191.25" rotation="0 -90 0"></a-image>
 
-                <a-image src="#door" width="82.5" height="208" position="1 -30 -258.75" rotation="0 90 0"></a-image>
+                <a-image src="#door" width="82.5" height="208" position="2 -30 -258.75" rotation="0 90 0"></a-image>
+
+                <a-entity geometry="primitive: box; width: 120; depth: 55; height: 220" position="60 -25 -27.5" material="color: white"></a-entity>
+                <a-entity geometry="primitive: box; width: 92; depth: 135; height: 40" position="166 -115 -67.5" material="color: white"></a-entity>
+                <a-entity geometry="primitive: box; width: 112; depth: 40; height: 147" position="370.5 -61 -20" material="color: white"></a-entity>
+
+                <a-entity position="300 0 -275">
+                    <a-entity id="childTable" position="0 -112.5 0">
+                        <a-box color="white" width="77" height="5" depth="55" position="0 22.5 0"></a-box>
+                        <a-cylinder color="white" height="45" radius="4" position="33.5 0 22.5"></a-cylinder>
+                        <a-cylinder color="white" height="45" radius="4" position="33.5 0 -22.5"></a-cylinder>
+                        <a-cylinder color="white" height="45" radius="4" position="-33.5 0 22.5"></a-cylinder>
+                        <a-cylinder color="white" height="45" radius="4" position="-33.5 0 -22.5"></a-cylinder>
+                    </a-entity>
+
+                    <a-entity class="stool" position="0 -120 53" rotation="0 180 0">
+                        <a-box color="#006dc1" width="39" height="37" depth="4" position="0 34 -16"></a-box>
+                        <a-box color="#006dc1" width="39" height="4" depth="36" position="0 13 0"></a-box>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="15 0 13.5"></a-cylinder>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="15 0 -13.5"></a-cylinder>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="-15 0 13.5"></a-cylinder>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="-15 0 -13.5"></a-cylinder>
+                    </a-entity>
+                    <a-entity class="stool" position="-63 -120 0" rotation="0 90 0">
+                        <a-box color="#006dc1" width="39" height="37" depth="4" position="0 34 -16"></a-box>
+                        <a-box color="#006dc1" width="39" height="4" depth="36" position="0 14 0"></a-box>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="15 0 13.5"></a-cylinder>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="15 0 -13.5"></a-cylinder>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="-15 0 13.5"></a-cylinder>
+                        <a-cylinder color="#006dc1" height="30" radius="4" position="-15 0 -13.5"></a-cylinder>
+                    </a-entity>
+                </a-entity>
 
                 <a-entity position="213.75 70 -152.5">
                     <a-light type="point" position="0 0 -10" intensity="0.2"></a-light>
