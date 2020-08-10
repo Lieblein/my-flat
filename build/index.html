@@ -19,7 +19,7 @@
     <a-scene id="scene">
         <a-assets>
             <img id="floorImg" src="./static/floor.jpg" />
-            <img id="electricity1Black" src="./static/electricity1Black.png" />
+            <img id="electricityBedside" src="./static/electricityBedside.png" />
             <img id="electricity2" src="./static/electricity2.png" />
             <img id="electricityKitchen" src="./static/electricityKitchen.png" />
             <img id="electricityTV" src="./static/electricityTV.png" />
@@ -191,11 +191,11 @@
 
             <a-entity id="bedroom" position="580 0 -210">
                 <a-wall width="417.5" position="0 0 -208.75" material="src: #fotooboi"></a-wall>
-                <a-wall width="426" front="true" position="213 0 -426" color="#cad2d4"></a-wall>
-                <a-image src="#window" width="130" height="150" position="159.5 20 -425"></a-image>
-                <a-image src="#radiator" width="65" height="65" position="159.5 -95 -425"></a-image>
-                <a-entity geometry="primitive: box; width: 7.5; depth: 23; height: 270" position="3.25 0 -414" material="color: #cad2d4"></a-entity>
-                <a-entity geometry="primitive: box; width: 160; depth: 23; height: 270" position="346 0 -414" material="color: #cad2d4"></a-entity>
+                <a-wall width="426" front="true" position="213 0 -440" color="#cad2d4"></a-wall>
+                <a-image src="#window" width="130" height="150" position="159.5 20 -439"></a-image>
+                <a-image src="#radiator" width="65" height="65" position="159.5 -95 -439"></a-image>
+                <a-entity geometry="primitive: box; width: 7.5; depth: 23; height: 270" position="3.25 0 -429" material="color: #cad2d4"></a-entity>
+                <a-entity geometry="primitive: box; width: 160; depth: 23; height: 270" position="346 0 -429" material="color: #cad2d4"></a-entity>
                 <a-entity geometry="primitive: box; width: 21; depth: 13; height: 270" position="414.5 0 -6.5" material="color: #cad2d4"></a-entity>
                 <a-entity>
                     <a-wall width="17" front="true" position="8.5 0 0" color="#cad2d4"></a-wall>
@@ -203,24 +203,26 @@
                     <a-wall width="298" front="true" position="258 0 0" color="#cad2d4"></a-wall>
                 </a-entity>
                 <a-entity position="425 0 -402" rotation="0 -90 0">
-                    <a-wall width="244" front="true" position="122 0 0" color="#cad2d4"></a-wall>
-                    <a-entity geometry="primitive: box; width: 78; depth: 1; height: 62" position="283 104 0" material="color: #cad2d4"></a-entity>
-                    <a-wall width="80" front="true" position="362 0 0" color="#cad2d4"></a-wall>
+                    <a-wall width="244" front="true" position="105.5 0 0" color="#cad2d4"></a-wall>
+                    <a-entity geometry="primitive: box; width: 80; depth: 1; height: 62" position="267 104 0" material="color: #cad2d4"></a-entity>
+                    <a-wall width="80" front="true" position="348 0 0" color="#cad2d4"></a-wall>
                 </a-entity>
-                <a-image src="#window" width="100" height="120" position="424 12 -209" rotation="0 -90 0"></a-image>
-                <a-image src="#radiator" width="65" height="65" position="424 -95 -209" rotation="0 -90 0"></a-image>
-                <a-image src="#electricity2" width="12" height="8" position="424 -114 -392" rotation="0 -90 90"></a-image>
+                <a-image src="#window" width="100" height="120" position="424 12 -225" rotation="0 -90 0"></a-image>
+                <a-image src="#radiator" width="65" height="65" position="424 -95 -225" rotation="0 -90 0"></a-image>
+                <a-image src="#electricity2" width="12" height="8" position="424 -114 -403.5" rotation="0 -90 90"></a-image>
 
-                <a-entity position="0 0 -85">
+                <a-entity position="0 0 -91">
                     <a-entity class="nightstand" geometry="primitive: box; width: 35; depth: 41; height: 61.5" position="18.5 -103 -20.5" material="color: #341c0f"></a-entity>
-                    <a-image src="#electricity1Black" width="8" height="8" position="1.5 -61 -20" rotation="0 -90 0"></a-image>
+                    <a-image src="#electricityBedside" width="14" height="8" position="1.5 -61 -20.5" rotation="0 -90 180"></a-image>
+                    <a-kitchen-lamp position="10 60 -20.5" height="160"></a-kitchen-lamp>
                     <a-entity id="bed" geometry="primitive: box; width: 210; depth: 205; height: 45" position="105 -114 -143.5" material="color: white"></a-entity>
                     <a-entity id="headboard" geometry="primitive: box; width: 5; depth: 205; height: 50" position="2.5 -66 -143.5" material="color: white"></a-entity>
                     <a-entity class="nightstand" geometry="primitive: box; width: 35; depth: 41; height: 61.5" position="18.5 -103 -266.5" material="color: #341c0f"></a-entity>
-                    <a-image src="#electricity1Black" width="8" height="8" position="1.5 -61 -266" rotation="0 -90 0"></a-image>
+                    <a-image src="#electricityBedside" width="14" height="8" position="1.5 -61 -266.5" rotation="0 -90 0"></a-image>
+                    <a-kitchen-lamp position="10 60 -266.5" height="160"></a-kitchen-lamp>
                 </a-entity>
 
-                <a-entity position="363 0 -333">
+                <a-entity position="363 0 -348">
                     <a-entity id="myTable" geometry="primitive: box; width: 60; depth: 100; height: 74" position="30 -100 0" material="color: #341c0f"></a-entity>
                     <a-entity id="myPK" geometry="primitive: box; width: 41; depth: 18; height: 40" position="26 -115 -60" material="color: black"></a-entity>
                 </a-entity>
