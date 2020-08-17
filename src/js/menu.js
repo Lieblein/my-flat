@@ -25,11 +25,14 @@ function moveCamera({ position, rotation }) {
     camera.setAttribute('rotation', rotation);
 }
 
-function toggleLight(newRoomId) { 
+function toggleLight(newRoomId) {
     const lights = document.getElementsByTagName('a-light');
-    Array.prototype.forEach.call(lights, light => light.setAttribute('visible', false));
+    Array.prototype.forEach.call(lights, light => light.setAttribute('intensity', 0));
     const newRoomLights = document.getElementById(newRoomId).getElementsByTagName('a-light');
-    Array.prototype.forEach.call(newRoomLights, light => light.setAttribute('visible', true));
+    Array.prototype.forEach.call(newRoomLights, (light) => {
+        const intensity = light.getAttribute('data-intensity');
+        light.setAttribute('intensity', intensity);
+    });
 }
 
 function chooseMenuItem() {
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Array.prototype.forEach.call(menuButtons, button => button.addEventListener('click', chooseMenuItem));
 
     document.getElementById('scene').addEventListener('loaded', () => {
-        chooseMenuItem.call({ id: 'toBedroom' });
+        chooseMenuItem.call({ id: 'toLobby' });
     });
 });
 

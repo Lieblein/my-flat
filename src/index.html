@@ -81,16 +81,16 @@
                 <a-entity geometry="primitive: box; width: 60; depth: 40; height: 53" position="99 -109 -37" material="color: #cf9a63"></a-entity>
                 <a-entity id="hallMat" geometry="primitive: box; width: 200; depth: 120; height: 2" position="142 -135 -67.75" material="color: #2c2827"></a-entity>
 
-                <a-entity position="158 70 -107">
-                    <a-light type="point" position="0 0 -1" intensity="0.2"></a-light>
-                    <a-light type="point" position="-1 0 1" intensity="0.2"></a-light>
-                    <a-light type="point" position="1 0 1" intensity="0.2"></a-light>
+                <a-entity position="158 130 -107" light-cylinder>
+                    <a-light type="point" position="0 0 -1"data-intensity="0.2"></a-light>
+                    <a-light type="point" position="-1 0 1"data-intensity="0.2"></a-light>
+                    <a-light type="point" position="1 0 1"data-intensity="0.2"></a-light>
                 </a-entity>
-                <a-light type="point" position="241.5 130 -156" intensity="0.15"></a-light>
-                <a-light type="point" position="341.5 130 -156" intensity="0.15"></a-light>
-                <a-light type="point" position="441.5 130 -156" intensity="0.15"></a-light>
-                <a-light type="point" position="541.5 130 -156" intensity="0.15"></a-light>
-                <a-light type="point" position="641.5 130 -156" intensity="0.15"></a-light>
+                <a-entity position="0 130 -156">
+                    <a-light type="point" position="314 0 0"data-intensity="0.15" light-cylinder></a-light>
+                    <a-light type="point" position="444 0 0"data-intensity="0.15" light-cylinder></a-light>
+                    <a-light type="point" position="574 0 0"data-intensity="0.15" light-cylinder></a-light>
+                </a-entity>
             </a-entity>
 
             <a-entity id="kitchen" position="0 0 -210">
@@ -177,15 +177,11 @@
                     <a-kitchen-lamp position="0 0 0" height="60"></a-kitchen-lamp>
                     <a-kitchen-lamp position="0 0 -63.5" height="60"></a-kitchen-lamp>
                 </a-entity>
-                <a-entity position="450 64 -320">
-                    <a-light type="point" position="10 0 0" intensity="0.1"></a-light>
-                    <a-light type="point" position="-10 0 0" intensity="0.1"></a-light>
-                    <a-light type="point" position="0 0 10" intensity="0.1"></a-light>
-                    <a-light type="point" position="0 0 -10" intensity="0.1"></a-light>
-                </a-entity>
-                <a-entity position="450 64 -120">
-                    <a-light type="point" position="10 0 0" intensity="0.1"></a-light>
-                    <a-light type="point" position="-10 0 0" intensity="0.1"></a-light>
+                <a-entity position="470 130 -311" light-cylinder>
+                    <a-light type="point" position="10 0 0" data-intensity="0.1"></a-light>
+                    <a-light type="point" position="-10 0 0" data-intensity="0.1"></a-light>
+                    <a-light type="point" position="0 0 10" data-intensity="0.1"></a-light>
+                    <a-light type="point" position="0 0 -10" data-intensity="0.1"></a-light>
                 </a-entity>
             </a-entity>
 
@@ -214,12 +210,12 @@
                 <a-entity position="0 0 -91">
                     <a-entity class="nightstand" geometry="primitive: box; width: 35; depth: 41; height: 61.5" position="18.5 -103 -20.5" material="color: #341c0f"></a-entity>
                     <a-image src="#electricityBedside" width="14" height="8" position="1.5 -61 -20.5" rotation="0 -90 180"></a-image>
-                    <a-kitchen-lamp position="10 60 -20.5" height="160"></a-kitchen-lamp>
+                    <a-kitchen-lamp position="15 60 -20.5" height="160"></a-kitchen-lamp>
                     <a-entity id="bed" geometry="primitive: box; width: 210; depth: 205; height: 45" position="105 -114 -143.5" material="color: white"></a-entity>
                     <a-entity id="headboard" geometry="primitive: box; width: 5; depth: 205; height: 50" position="2.5 -66 -143.5" material="color: white"></a-entity>
                     <a-entity class="nightstand" geometry="primitive: box; width: 35; depth: 41; height: 61.5" position="18.5 -103 -266.5" material="color: #341c0f"></a-entity>
                     <a-image src="#electricityBedside" width="14" height="8" position="1.5 -61 -266.5" rotation="0 -90 0"></a-image>
-                    <a-kitchen-lamp position="10 60 -266.5" height="160"></a-kitchen-lamp>
+                    <a-kitchen-lamp position="15 60 -266.5" height="160"></a-kitchen-lamp>
                 </a-entity>
 
                 <a-entity position="363 0 -348">
@@ -229,11 +225,11 @@
 
                 <a-entity id="cupboard" geometry="primitive: box; width: 171; depth: 56; height: 220" position="318 -25 -28" material="color: white"></a-entity>
 
-                <a-entity position="105 64 -250">
-                    <a-light type="point" position="0 0 10" intensity="0.225"></a-light>
-                    <a-light type="point" position="10 0 0" intensity="0.225"></a-light>
-                    <a-light type="point" position="0 0 -10" intensity="0.225"></a-light>
-                    <a-light type="point" position="-10 0 0" intensity="0.225"></a-light>
+                <a-entity position="160 130 -235" light-cylinder>
+                    <a-light type="point" position="0 0 10" data-intensity="0.2"></a-light>
+                    <a-light type="point" position="10 0 0" data-intensity="0.2"></a-light>
+                    <a-light type="point" position="0 0 -10" data-intensity="0.2"></a-light>
+                    <a-light type="point" position="-10 0 0" data-intensity="0.2"></a-light>
                 </a-entity>
             </a-entity>
 
@@ -283,11 +279,11 @@
                     </a-entity>
                 </a-entity>
 
-                <a-entity position="213.75 70 -152.5">
-                    <a-light type="point" position="0 0 -10" intensity="0.2"></a-light>
-                    <a-light type="point" position="0 0 10" intensity="0.2"></a-light>
-                    <a-light type="point" position="10 0 0" intensity="0.2"></a-light>
-                    <a-light type="point" position="-10 0 0" intensity="0.2"></a-light>
+                <a-entity position="161 130 -191" light-cylinder>
+                    <a-light type="point" position="0 0 -10"data-intensity="0.2"></a-light>
+                    <a-light type="point" position="0 0 10"data-intensity="0.2"></a-light>
+                    <a-light type="point" position="10 0 0"data-intensity="0.2"></a-light>
+                    <a-light type="point" position="-10 0 0"data-intensity="0.2"></a-light>
                 </a-entity>
             </a-entity>
 
@@ -308,14 +304,14 @@
 
                 <a-entity geometry="primitive: box; width: 90; depth: 52; height: 54" position="77 -91 -26" material="color: #bdbac1">
                     <a-entity geometry="primitive: box; width: 50; depth: 39; height: 13.5" position="0 33.75 0" material="color: white"></a-entity>
-                    <a-circle radius="35" rotation="0 180 0" position="0 95 20" material="color: white"></a-circle>
+                    <a-box width="65" height="65" depth="1" position="0 95 20" material="color: white"></a-box>
                 </a-entity>
 
                 <a-image src="#door" width="82.5" height="208" position="59.25 -30 -205"></a-image>
 
-                <a-entity position="70 70 -106">
-                    <a-light type="point" position="0 0 -50" intensity="0.5"></a-light>
-                    <a-light type="point" position="0 0 50" intensity="0.5"></a-light>
+                <a-entity position="77 130 0">
+                    <a-light type="point" position="0 0 -130"data-intensity="0.5" light-cylinder></a-light>
+                    <a-light type="point" position="0 0 -30"data-intensity="0.5" light-cylinder></a-light>
                 </a-entity>
             </a-entity>
 
@@ -334,11 +330,11 @@
 
                 <a-image src="#door" width="82.5" height="208" position="98.25 -30 -119"></a-image>
 
-                <a-entity position="94 70 -60">
-                    <a-light type="point" position="-50 0 0" intensity="0.5"></a-light>
-                    <a-light type="point" position="50 0 0" intensity="0.5"></a-light>
-                </a-entity>
+                <a-light position="98 130 -60" type="point" data-intensity="0.5" light-cylinder></a-light>
             </a-entity>
+
+            <a-wall width="105" front="true" position="1075 0 -650" color="#cad2d4"></a-wall>
+            <a-wall width="440" position="1127.5 0 -430" color="#cad2d4"></a-wall>
         </a-entity>
     </a-scene>
   </body>

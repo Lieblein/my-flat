@@ -51,7 +51,7 @@ AFRAME.registerComponent('kitchen-lamp', {
 
         const light = document.createElement('a-light');
         light.setAttribute('type', 'point');
-        light.setAttribute('intensity', '0.2');
+        light.setAttribute('data-intensity', '0.2');
         light.setAttribute('position', `0 ${(height - glassHeight) / -2} 0`);
         el.appendChild(light);
     },
