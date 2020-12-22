@@ -28,5 +28,18 @@ AFRAME.registerComponent('rails', {
             rail.setAttribute('position', `${itemPosition} 0 ${itemDepth / -2}`);
             el.appendChild(rail);
         }
+
+        /* const a = 4;
+        const b = 3;
+        const n = 31;
+        const startItemPosition = width / -2;
+        for (let i = 0; i < n; i++) {
+            const rail = document.createElement('a-entity');
+            rail.setAttribute('geometry', `primitive: box; width: ${a}; depth: ${itemDepth}; height: 270`);
+            rail.setAttribute('material', 'color: #cf9a63');
+            const itemPosition = startItemPosition + i * a + i * b;
+            rail.setAttribute('position', `${itemPosition} 0 ${itemDepth / -2}`);
+            el.appendChild(rail);
+        } */
     },
 });
