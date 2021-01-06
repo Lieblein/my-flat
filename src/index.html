@@ -133,13 +133,16 @@
                 <!--столешница 255 см, рабочая зона 115 см (255-60-60-20)-->
                 <a-entity id="kitchenSet">
                     <!--Левая колонна-->
-                    <a-entity geometry="primitive: box; width: 16; depth: 60; height: 270" position="52 0 -30" material="color: white"></a-entity>
+                    <a-entity position="58 -20 -30" rotation="0 90 0">
+                        <a-entity facade-with-integrated-handle="width: 60; height: 63" position="0 -73.5 0"></a-entity>
+                        <a-entity facade-with-integrated-handle="width: 60; height: 147" position="0 31.5 0" rotation="0 0 180"></a-entity>
+                    </a-entity>
 
                     <a-entity geometry="primitive: box; width: 60; depth: 60; height: 180" position="30 -45 -90" material="src: #refrigerator"></a-entity>
                     <a-entity geometry="primitive: box; width: 2; depth: 60; height: 37" position="59 64.5 -90" material="color: white"></a-entity>
 
                     <!--верхний короб с вентиляцией-->
-                    <a-entity geometry="primitive: box; width: 60; depth: 380; height: 53" position="30 108.5 -250" material="color: white"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 440; height: 53" position="30 108.5 -220" material="color: white"></a-entity>
 
                     <!--верхние шкафчики-->
                     <a-entity position="17.5 46.5 -247.5">
@@ -157,29 +160,45 @@
                     </a-entity>
 
                     <!--цоколь-->
-                    <a-entity geometry="primitive: box; width: 2; depth: 440; height: 10" position="58 -130 -249.5" material="color: #d6d6d6"></a-entity>
+                    <a-entity geometry="primitive: box; width: 2; depth: 440; height: 10" position="57 -130 -220" material="color: #d6d6d6"></a-entity>
 
                     <!--нижние шкафчики, большинство встроенных посудомоеек имеют высоту в 82 см-->
                     <a-entity position="58 -94 -247.5">
                         <a-entity position="0 5 0">
+                            <!--под мойкой-->
                             <a-entity facade-with-integrated-handle="width: 60; height: 72" position="0 0 97.5" rotation="0 90 0"></a-entity>
+
+                            <!--посудомойка-->
                             <a-entity facade-with-integrated-handle="width: 60; height: 72" position="0 0 37.5" rotation="0 90 0"></a-entity>
+
+                            <!--под рабочей зоной-->
                             <a-entity position="0 0 -22.5" rotation="0 90 0">
                                 <a-entity facade-with-integrated-handle="width: 60; height: 36" position="0 18 0"></a-entity>
                                 <a-entity facade-with-integrated-handle="width: 60; height: 36" position="0 -18 0"></a-entity>
                             </a-entity>
+
+                            <!--под варочной поверхностью-->
                             <a-entity position="0 0 -82.5" rotation="0 90 0">
                                 <a-entity facade-with-integrated-handle="width: 60; height: 18" position="0 27 0"></a-entity>
                                 <a-entity facade-with-integrated-handle="width: 60; height: 18" position="0 9 0"></a-entity>
                                 <a-entity facade-with-integrated-handle="width: 60; height: 36" position="0 -18 0"></a-entity>
                             </a-entity>
-                            <a-entity facade-with-integrated-handle="width: 15; height: 72" position="0 0 -120" rotation="0 90 0"></a-entity>
+
+                            <!--бутылочница-->
+                            <a-entity position="0 0 -120" rotation="0 90 0">
+                                <a-entity facade-with-integrated-handle="width: 15; height: 18" position="0 27 0"></a-entity>
+                                <a-entity facade-with-integrated-handle="width: 15; height: 18" position="0 9 0"></a-entity>
+                                <a-entity facade-with-integrated-handle="width: 15; height: 36" position="0 -18 0"></a-entity>
+                            </a-entity>
                         </a-entity>
                     </a-entity>
 
-                    <a-entity geometry="primitive: box; width: 60; depth: 65; height: 220" position="30 -23 -407.5" material="color: white">
-                        <a-image src="#microwave" width="60" height="40" position="30.5 -10 2.5" rotation="0 90 0"></a-image>
-                        <a-image src="#oven" width="60" height="60" position="30.5 40 2.5" rotation="0 90 0"></a-image>
+                    <a-entity position="58 -18 -407.5" rotation="0 90 0">
+                        <a-entity geometry="primitive: box; width: 65; depth: 2; height: 156" position="0 25 0" material="color: white"></a-entity>
+                        <a-image src="#oven" width="60" height="60" position="-2.5 17 2"></a-image>
+                        <a-image src="#microwave" width="60" height="40" position="-2.5 -33 2"></a-image>
+                        <a-entity facade-with-integrated-handle="width: 65; height: 18" position="0 -62 0"></a-entity>
+                        <a-entity facade-with-integrated-handle="width: 65; height: 36" position="0 -89 0"></a-entity>
                     </a-entity>
 
                     <a-entity geometry="primitive: box; width: 60; depth: 255; height: 1" position="30 82 -247.5" material="color: #cf9a63"></a-entity>
