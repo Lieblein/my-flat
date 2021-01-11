@@ -29,7 +29,8 @@ AFRAME.registerComponent('rails', {
             el.appendChild(rail);
         }
 
-        /* const a = 4;
+        /* const { el, data: { width, itemDepth = 3 } } = this;
+        const a = 4;
         const b = 3;
         const n = 31;
         const startItemPosition = width / -2;
