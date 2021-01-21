@@ -38,6 +38,7 @@
             <img id="wallpaperKitchen" src="./static/wallpaperKitchen.png" />
             <img id="wallpaperHall" src="./static/wallpaperHall.png" />
             <img id="childWallpaper" src="./static/childWallpaper (3).png" />
+            <img id="bedroomWallpaper" src="./static/7.png" />
             <img id="carpet" src="./static/carpet.png" />
         </a-assets>
         
@@ -232,21 +233,21 @@
 
             <a-entity id="bedroom" position="580 0 -210">
                 <a-wall width="417.5" position="0 0 -208.75" material="src: #fotooboi" with-plinth></a-wall>
-                <a-wall width="426" front="true" position="213 0 -440" color="#a1a1a1" with-plinth></a-wall>
+                <a-wall width="426" front="true" position="213 0 -440" material="src: #bedroomWallpaper; repeat: 4.018868 2.54716" with-plinth></a-wall>
                 <a-image src="#window" width="130" height="150" position="159.5 20 -439"></a-image>
                 <a-image src="#radiator" width="65" height="65" position="159.5 -95 -439"></a-image>
-                <a-entity geometry="primitive: box; width: 7.5; depth: 23; height: 270" position="3.25 0 -429" material="color: #a1a1a1" with-plinth></a-entity>
-                <a-entity geometry="primitive: box; width: 160; depth: 23; height: 270" position="346 0 -429" material="color: #a1a1a1" with-plinth></a-entity>
-                <a-entity geometry="primitive: box; width: 21; depth: 13; height: 270" position="414.5 0 -6.5" material="color: #a1a1a1" with-plinth></a-entity>
+                <a-entity geometry="primitive: box; width: 7.5; depth: 23; height: 270" position="3.25 0 -429" material="src: #bedroomWallpaper; repeat: 0.198113 2.54716" with-plinth></a-entity>
+                <a-entity geometry="primitive: box; width: 160; depth: 23; height: 270" position="346 0 -429" material="src: #bedroomWallpaper; repeat: 1.509434 2.54716" with-plinth></a-entity>
+                <a-entity geometry="primitive: box; width: 21; depth: 13; height: 270" position="414.5 0 -6.5" material="src: #bedroomWallpaper; repeat: 0.198113 2.54716" with-plinth></a-entity>
                 <a-entity>
-                    <a-wall width="17" front="true" position="8.5 0 0" color="#a1a1a1" with-plinth></a-wall>
-                    <a-entity geometry="primitive: box; width: 92; depth: 1; height: 62" position="63 104 0" material="color: #a1a1a1"></a-entity>
-                    <a-wall width="298" front="true" position="258 0 0" color="#a1a1a1" with-plinth></a-wall>
+                    <a-wall width="17" front="true" position="8.5 0 0" material="src: #bedroomWallpaper; repeat: 0.160377 2.54716" with-plinth></a-wall>
+                    <a-entity geometry="primitive: box; width: 92; depth: 1; height: 62" position="63 104 0" material="src: #bedroomWallpaper; repeat: 0.867924 0.58490"></a-entity>
+                    <a-wall width="298" front="true" position="258 0 0" material="src: #bedroomWallpaper; repeat: 2.811320 2.54716" with-plinth></a-wall>
                 </a-entity>
                 <a-entity position="425 0 -402" rotation="0 -90 0">
-                    <a-wall width="244" front="true" position="105.5 0 0" color="#a1a1a1" with-plinth></a-wall>
-                    <a-entity geometry="primitive: box; width: 80; depth: 1; height: 62" position="267 104 0" material="color: #a1a1a1"></a-entity>
-                    <a-wall width="80" front="true" position="348 0 0" color="#a1a1a1" with-plinth></a-wall>
+                    <a-wall width="244" front="true" position="105.5 0 0" material="src: #bedroomWallpaper; repeat: 2.301886 2.54716" with-plinth></a-wall>
+                    <a-entity geometry="primitive: box; width: 80; depth: 1; height: 62" position="267 104 0" material="src: #bedroomWallpaper; repeat: 0.754717 0.58490"></a-entity>
+                    <a-wall width="80" front="true" position="348 0 0" material="src: #bedroomWallpaper; repeat: 0.754717 2.54716" with-plinth></a-wall>
                 </a-entity>
                 <a-image src="#window" width="100" height="120" position="424 12 -225" rotation="0 -90 0"></a-image>
                 <a-image src="#radiator" width="65" height="65" position="424 -95 -225" rotation="0 -90 0"></a-image>
@@ -347,7 +348,7 @@
                     <a-plane rotation="-88 0 0" position="0 34 -99.5" width="80" height="19" material="src: #kolliano; repeat: 2.66666 0.86666"></a-plane>
                 </a-entity>
 
-                <a-entity geometry="primitive: box; width: 90; depth: 52; height: 54" position="77 -91 -26" material="color: #bdbac1">
+                <a-entity geometry="primitive: box; width: 90; depth: 52; height: 54" position="66.5 -91 -26" material="color: #bdbac1">
                     <a-entity geometry="primitive: box; width: 50; depth: 39; height: 13.5" position="0 33.75 0" material="color: white"></a-entity>
                     <a-box width="65" height="65" depth="1" position="0 95 20" material="color: white"></a-box>
                 </a-entity>
@@ -371,7 +372,7 @@
                 <a-entity geometry="primitive: box; width: 24; depth: 25.5; height: 270" position="12 0 -107.25" material="src: #kolliano; repeat: 1 9"></a-entity>
 
                 <a-entity geometry="primitive: box; width: 60; depth: 40; height: 85" position="153 -93 -25" material="color: white"></a-entity>
-                <a-entity geometry="primitive: box; width: 30; depth: 40; height: 160" position="103 0 -25" material="color: white"></a-entity>
+                <a-entity visible="false" geometry="primitive: box; width: 30; depth: 40; height: 160" position="103 0 -25" material="color: white"></a-entity>
                 <a-entity geometry="primitive: box; width: 63.5; depth: 36.5; height: 78.5" position="31.75 -86.5 -58.5" material="color: white"></a-entity>
 
                 <a-image src="#door" width="82.5" height="208" position="98.25 -30 -119"></a-image>
