@@ -35,11 +35,11 @@
             <img id="refrigerator" src="./static/refrigerator.jpg" />
             <img id="hob" src="./static/hob.jpg" />
             <img id="sink" src="./static/sink.jpg" />
-            <img id="wallpaperKitchen" src="./static/wallpaperKitchen.png" />
-            <img id="wallpaperHall" src="./static/wallpaperHall.png" />
-            <img id="childWallpaper" src="./static/childWallpaper (3).png" />
-            <img id="bedroomWallpaper" src="./static/7.png" />
-            <img id="carpet" src="./static/carpet.png" />
+            <img id="wallpaperKitchen" src="./static/12.jpg" />
+            <img id="wallpaperHall" src="./static/10c.png" />
+            <img id="childWallpaper" src="./static/11.jpg" />
+            <img id="bedroomWallpaper" src="./static/1.jpg" />
+            <img id="carpet" src="./static/carpet/screenshot.10.png" />
         </a-assets>
         
         <a-entity id="cameraList" position="0 157 0">
@@ -50,17 +50,17 @@
         <!--<a-plane id="ceiling" rotation="-90 0 0" position="0 270 0" width="10000" height="10000" material="color: white"></a-plane>-->
         <a-entity id="rooms" position="0 135 0">
             <a-entity id="hall" position="0 0 0">
-                <a-entity geometry="primitive: box; width: 129; depth: 17; height: 270" position="64.5 0 -8.5" material="src: #wallpaperHall; repeat: 1.21698 2.54716" with-plinth></a-entity>
-                <a-wall width="110" position="0 0 -72" material="src: #wallpaperHall; repeat: 1 2.54716" with-plinth></a-wall>
-                <a-entity geometry="primitive: box; width: 44; depth: 73.5; height: 270" position="22 0 -163.75" material="src: #wallpaperHall; repeat: 0.69339 2.54716" with-plinth></a-entity>
+                <a-entity geometry="primitive: box; width: 129; depth: 17; height: 270" position="64.5 0 -8.5" material="src: #wallpaperHall; repeat: 1.21698 2.54716" with-plinth="color: #3e433a"></a-entity>
+                <a-wall width="110" position="0 0 -72" material="src: #wallpaperHall; repeat: 1 2.54716" with-plinth="color: #3e433a"></a-wall>
+                <a-entity geometry="primitive: box; width: 44; depth: 73.5; height: 270" position="22 0 -163.75" material="src: #wallpaperHall; repeat: 0.69339 2.54716" with-plinth="color: #3e433a"></a-entity>
 
-                <a-wall width="48.5" front="true" position="68.25 0 -200.5" material="src: #wallpaperHall; repeat: 0.45754 2.54716" with-plinth></a-wall>
+                <a-wall width="48.5" front="true" position="68.25 0 -200.5" material="src: #wallpaperHall; repeat: 0.45754 2.54716" with-plinth="color: #3e433a"></a-wall>
                 <a-entity geometry="primitive: box; width: 131; depth: 1; height: 62" position="158 104 -200.5" material="src: #wallpaperHall; repeat: 1.23585 0.58490"></a-entity>
-                <a-wall width="467" front="true" position="457 0 -200.5" material="src: #wallpaperHall; repeat: 4.40566 2.54716" with-plinth></a-wall>
+                <a-wall width="467" front="true" position="457 0 -200.5" material="src: #wallpaperHall; repeat: 4.40566 2.54716" with-plinth="color: #3e433a"></a-wall>
 
-                <a-wall width="98" position="690.5 0 -151.5" material="src: #wallpaperHall; repeat: 0.92452 2.54716" with-plinth></a-wall>
-                <a-wall width="449" front="true" position="466 0 -102.5" material="src: #wallpaperHall; repeat: 4.23585 2.54716" with-plinth></a-wall>
-                <a-wall width="107" position="241.5 0 -49" material="src: #wallpaperHall; repeat: 1 2.54716" with-plinth></a-wall>
+                <a-wall width="98" position="690.5 0 -151.5" material="src: #wallpaperHall; repeat: 0.92452 2.54716" with-plinth="color: #3e433a"></a-wall>
+                <a-wall width="449" front="true" position="466 0 -102.5" material="src: #wallpaperHall; repeat: 4.23585 2.54716" with-plinth="color: #3e433a"></a-wall>
+                <a-wall width="107" position="241.5 0 -49" material="src: #wallpaperHall; repeat: 1 2.54716" with-plinth="color: #3e433a"></a-wall>
 
                 <a-image src="#door" width="92" height="208" position="644.5 -30 -199"></a-image>
                 <a-image src="#door" width="82.5" height="208" position="689.5 -30 -153.75" rotation="0 90 0"></a-image>
@@ -81,7 +81,7 @@
                     <a-entity geometry="primitive: box; width: 2; depth: 110; height: 270" position="-27 0 0" material="color: #cf9a63"></a-entity>
                 </a-entity>
                 <a-entity geometry="primitive: box; width: 60; depth: 40; height: 53" position="99 -109 -37" material="color: #cf9a63"></a-entity>
-                <a-image id="hallMat" src="#carpet" width="180" height="120" position="150 -134 -75" rotation="90 0 0"></a-image>
+                <a-image id="hallMat" src="#carpet" width="195" height="133" position="143 -134 -80" rotation="90 0 0"></a-image>
 
                 <a-entity position="158 130 -107" light-cylinder>
                     <a-light type="point" position="0 0 -1"data-intensity="0.2"></a-light>
@@ -143,7 +143,11 @@
                     <a-entity geometry="primitive: box; width: 2; depth: 60; height: 37" position="59 64.5 -90" material="color: white"></a-entity>
 
                     <!--верхний короб с вентиляцией-->
-                    <a-entity geometry="primitive: box; width: 60; depth: 440; height: 53" position="30 108.5 -220" material="color: white"></a-entity>
+                    <a-entity position="0 103.5 0" material="color: white">
+                        <a-entity geometry="primitive: box; width: 60; depth: 120; height: 43" position="30 0 -60" material="color: white"></a-entity>
+                        <a-entity geometry="primitive: box; width: 35; depth: 255; height: 43" position="17.5 0 -247.5" material="color: #cf9a63"></a-entity>
+                        <a-entity geometry="primitive: box; width: 60; depth: 65; height: 43" position="30 0 -407.5" material="color: white"></a-entity>
+                    </a-entity>
 
                     <!--верхние шкафчики-->
                     <a-entity position="17.5 46.5 -247.5">
@@ -195,9 +199,8 @@
                         <a-entity facade-with-integrated-handle="width: 65; height: 36" position="0 -89 0"></a-entity>
                     </a-entity>
 
-                    <a-entity geometry="primitive: box; width: 60; depth: 255; height: 1" position="30 82 -247.5" material="color: #cf9a63"></a-entity>
-                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 135" position="30 14.5 -120" material="color: #cf9a63"></a-entity>
-                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 135" position="30 14.5 -375" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 178" position="30 36 -120" material="color: #cf9a63"></a-entity>
+                    <a-entity geometry="primitive: box; width: 60; depth: 1; height: 178" position="30 36 -375" material="color: #cf9a63"></a-entity>
                 </a-entity>
 
                 <a-entity id="NikitaTable" geometry="primitive: box; width: 75; depth: 123; height: 74" position="532.5 -100 -74" material="color: #7a4221"></a-entity>
@@ -277,10 +280,10 @@
                 <a-wall width="427.5" front="true" position="213.75 0 -305" material="src: #childWallpaper; repeat: 8.06604 5.09434"></a-wall>
                 <a-wall width="305" position="427.5 0 -152.5" material="src: #childWallpaper; repeat: 5.75472 5.09434"></a-wall>
                 <a-wall width="427.5" front="true" position="213.75 0 0" material="src: #childWallpaper; repeat: 8.06604 5.09434"></a-wall>-->
-                <a-wall width="305" position="0 0 -152.5" material="src: #childWallpaper; repeat: 2.87736 4.21875" with-plinth></a-wall>
-                <a-wall width="427.5" front="true" position="213.75 0 -305" material="src: #childWallpaper; repeat: 4.03302 4.21875" with-plinth></a-wall>
-                <a-wall width="305" position="427.5 0 -152.5" material="src: #childWallpaper; repeat: 2.87736 4.21875" with-plinth></a-wall>
-                <a-wall width="427.5" front="true" position="213.75 0 0" material="src: #childWallpaper; repeat: 4.03302 4.21875" with-plinth></a-wall>
+                <a-wall width="305" position="0 0 -152.5" material="src: #childWallpaper; repeat: 2.87736 2.54716" with-plinth></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 -305" material="src: #childWallpaper; repeat: 4.03302 2.54716" with-plinth></a-wall>
+                <a-wall width="305" position="427.5 0 -152.5" material="src: #childWallpaper; repeat: 2.87736 2.54716" with-plinth></a-wall>
+                <a-wall width="427.5" front="true" position="213.75 0 0" material="src: #childWallpaper; repeat: 4.03302 2.54716" with-plinth></a-wall>
 
                 <a-image src="#window" width="174.5" height="150" position="426 20 -191.25" rotation="0 -90 0"></a-image>
                 <a-image src="#radiator" width="65" height="65" position="426 -95 -191.25" rotation="0 -90 0"></a-image>

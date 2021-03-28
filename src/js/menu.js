@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Array.prototype.forEach.call(menuButtons, button => button.addEventListener('click', chooseMenuItem));
 
     document.getElementById('scene').addEventListener('loaded', () => {
-        chooseMenuItem.call({ id: 'toKitchen' });
+        chooseMenuItem.call({ id: 'toLobby' });
     });
 });
 
